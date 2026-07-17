@@ -5,3 +5,11 @@ dist
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+
+# Raw footage and source photos are large binary media that shouldn't live
+# in git history. Drop real files in here; Remotion serves them from public/
+# via staticFile() regardless of git tracking.
+public/footage/*
+public/photos/*
+!public/footage/.gitkeep
+!public/photos/.gitkeep
