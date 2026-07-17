@@ -25,7 +25,6 @@ export type ClipBeat = {
   flashIn?: boolean;
   webChrome?: string; // fake url shown briefly top of frame
   silent?: boolean; // duck dialogue audio fully, let music lead (pure b-roll)
-  reframeScale?: number; // crop tighter on face/shoulders, zoomed from top-center (editorial talking-head reframe)
 };
 
 export type TitleBeat = {
@@ -113,8 +112,8 @@ const ch6: Beat[] = [
 // ---- Chapter 7: outro (closing talking segment) ----
 const ch7: Beat[] = [
   clip({ id: "c7-1", srcStart: 1200, srcEnd: 1206, playbackRate: 0.7, freezeTailFrames: secToFrames(2) }),
-  clip({ id: "c7-2", srcStart: 1235, srcEnd: 1255, reframeScale: 1.8 }),
-  clip({ id: "c7-3", srcStart: 1290, srcEnd: 1310, reframeScale: 1.8 }),
+  clip({ id: "c7-2", srcStart: 1235, srcEnd: 1255 }),
+  clip({ id: "c7-3", srcStart: 1290, srcEnd: 1310 }),
 ];
 
 const outro: Beat[] = [

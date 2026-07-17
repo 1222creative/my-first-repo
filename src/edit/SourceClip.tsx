@@ -42,17 +42,6 @@ export const SourceClip: React.FC<{ beat: ClipBeat; durationInFrames: number }> 
     video = <ChromaticAberration>{video}</ChromaticAberration>;
   }
 
-  if (beat.reframeScale) {
-    // Editorial talking-head crop: zoom in from the top-center so the shot
-    // holds on face/shoulders instead of the raw camera's wider framing.
-    video = (
-      <AbsoluteFill style={{ overflow: "hidden" }}>
-        <AbsoluteFill style={{ transform: `scale(${beat.reframeScale})`, transformOrigin: "50% 0%" }}>
-          {video}
-        </AbsoluteFill>
-      </AbsoluteFill>
-    );
-  }
 
   const isFrozenNow = holdAt !== null && frame >= holdAt;
 
