@@ -8,3 +8,4 @@ out
 
 # Raw source footage - large binary, not for version control.
 /footage
+/public/footage
